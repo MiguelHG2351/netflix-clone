@@ -22,9 +22,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </h2>
                 <ul className="flex gap-x-5">
                   <li className="text-xs">TV Show</li>
-                  <li className="text-xs">Supernatural</li>
-                  <li className="text-xs">Thriller</li>
-                  <li className="text-xs">US</li>
+                  <li className="text-xs relative before:absolute before:rounded-full before:w-2 before:h-2 before:bg-red-500 before:top-[calc(50%_-_4px)] before:-left-[14px]">Supernatural</li>
+                  <li className="text-xs relative before:absolute before:rounded-full before:w-2 before:h-2 before:bg-red-500 before:top-[calc(50%_-_4px)] before:-left-[14px]">Thriller</li>
+                  <li className="text-xs relative before:absolute before:rounded-full before:w-2 before:h-2 before:bg-red-500 before:top-[calc(50%_-_4px)] before:-left-[14px]">US</li>
                 </ul>
               </div>
               <div className="flex gap-x-8 self-stretch px-8 py-4 justify-center">
