@@ -6,7 +6,7 @@ import Shimmer from '../effects/Shimmer'
 
 export default function Header() {
   return (
-    <header className="flex flex-col absolute z-10 top-0">
+    <header className="flex flex-col absolute z-10 top-0 left-0 right-0">
       <div className="flex gap-2 px-4 py-2">
         <div className="logo flex shrink-0 items-stretch">
           <Image

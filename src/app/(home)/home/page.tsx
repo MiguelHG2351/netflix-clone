@@ -99,9 +99,9 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section>
-          <h2>Continue Watching for Eron</h2>
-          
+        <section className="p-2">
+          <h2 className="text-base font-medium">Continue Watching for Eron</h2>
+
         </section>
     </>
   )
