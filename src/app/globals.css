@@ -29,3 +29,8 @@ body {
 .hidden-tap {
   -webkit-tap-highlight-color: transparent;
 }
+
+.hidden-scroll::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}

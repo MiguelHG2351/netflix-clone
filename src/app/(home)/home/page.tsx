@@ -99,25 +99,100 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section className="px-2">
-          <h2 className="text-base font-medium mb-4">Continue Watching for Eron</h2>
-          <ul className="flex gap-x-4 whitespace-nowrap overflow-x-auto">
-            <li className="flex-shrink-0">
-              <Link href="/movies/id_movie/hash">
-                <Image width={115} height={207} src="/images/top-list/top-10-1.png" alt="The first movie on top 10" />
-              </Link>
-            </li>
-            <li className="flex-shrink-0">
-              <Link href="/movies/id_movie/hash">
-                <Image width={115} height={207} src="/images/top-list/other-serie.png" alt="Another serie in the top 10" />
-              </Link>
-            </li>
-            <li className="flex-shrink-0">
-              <Link href="/movies/id_movie/hash">
-                <Image width={115} height={207} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
-              </Link>
-            </li>
-          </ul>
+        <section className="py-2 flex flex-col gap-y-4">
+          <article className="px-2">
+            <h2 className="text-base font-medium mb-4">Continue Watching for Eron</h2>
+            <ul className="hidden-scroll flex gap-x-3 items-center whitespace-nowrap overflow-x-auto">
+              <li className="flex-shrink-0 h-max relative">
+                <div className="absolute right-0 top-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width={25} height={32} viewBox="0 0 25 32" fill="none">
+                    <path d="M23.828 30.7233L1.1848 28.5011V0.880964H23.828V30.7233Z" fill="#EE1520" stroke="#EE1520" strokeWidth="0.905726" />
+                  </svg>
+                  <div className="info absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-start items-center">
+                    <span className="text-[10px] font-bold uppercase">Top</span>
+                    <span className="text-xs font-bold leading-[2px]">10</span>
+                  </div>
+                </div>
+                <div className="absolute left-2 top-2">
+                  <Image
+                    src="/images/logos/netflix.png"
+                    width={20}
+                    height={36}
+                    alt="Netflix original"
+                  />
+                </div>
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/top-10-1.png" alt="The first movie on top 10" />
+                </Link>
+              </li>
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/other-serie.png" alt="Another serie in the top 10" />
+                </Link>
+              </li>
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
+                </Link>
+              </li>
+            </ul>
+          </article>
+          <article className="px-2">
+            <h2 className="text-base font-medium mb-4">My list</h2>
+            <ul className="hidden-scroll flex gap-x-3 items-center whitespace-nowrap overflow-x-auto">
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[164px]" width={109} height={164} src="/images/my-list/my-list-1.png" alt="The first movie on top 10" />
+                </Link>
+              </li>
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[164px]" width={109} height={164} src="/images/my-list/my-list-2.png" alt="Another serie in the top 10" />
+                </Link>
+              </li>
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[164px]" width={109} height={164} src="/images/my-list/my-list-3.png" alt="The third movie on top 10" />
+                </Link>
+              </li>
+              <li className="flex-shrink-0 h-max">
+                <Link href="/movies/id_movie/hash">
+                  <Image className="h-[164px]" width={109} height={164} src="/images/my-list/my-list-4.png" alt="The third movie on top 10" />
+                </Link>
+              </li>
+            </ul>
+          </article>
+          <article className="bg-gradient-shop flex pl-3">
+            <div className="flex-1 py-8 flex flex-col justify-center gap-y-2">
+              <div className="flex items-center">
+                <Image
+                  src="/images/logos/netflix.png"
+                  width={20}
+                  height={36}
+                  alt="Netflix original"
+                />
+                <h2>Shop</h2>
+              </div>
+              <p className="text-xs">Exclusive limited editions of carefully selected high-quality apparel and lifestyle products tied to our shows and brand on a regular basis</p>
+              <Link href="/" className="inline-block w-max p-2 px-4 bg-white text-black font-bold rounded-md">Go to shop</Link>
+            </div>
+            <ul className="flex-1 flex gap-x-2 whitespace-nowrap overflow-x-auto">
+              <Image
+                src="/images/shop/shop-1.png"
+                width={129}
+                height={195}
+                className="flex-shrink-0"
+                alt="Ejemplo 1 de la tienda"
+              />
+              <Image
+                src="/images/shop/shop-2.png"
+                width={129}
+                height={195}
+                className="flex-shrink-0"
+                alt="Ejemplo 1 de la tienda"
+              />
+            </ul>
+          </article>
         </section>
     </>
   )
