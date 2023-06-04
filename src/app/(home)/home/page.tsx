@@ -1,7 +1,7 @@
 'use client'
+import type { Metadata } from "next"
 import Image from "next/image"
-
-
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -99,9 +99,25 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section className="p-2">
-          <h2 className="text-base font-medium">Continue Watching for Eron</h2>
-
+        <section className="px-2">
+          <h2 className="text-base font-medium mb-4">Continue Watching for Eron</h2>
+          <ul className="flex gap-x-4 whitespace-nowrap overflow-x-auto">
+            <li className="flex-shrink-0">
+              <Link href="/movies/id_movie/hash">
+                <Image width={115} height={207} src="/images/top-list/top-10-1.png" alt="The first movie on top 10" />
+              </Link>
+            </li>
+            <li className="flex-shrink-0">
+              <Link href="/movies/id_movie/hash">
+                <Image width={115} height={207} src="/images/top-list/other-serie.png" alt="Another serie in the top 10" />
+              </Link>
+            </li>
+            <li className="flex-shrink-0">
+              <Link href="/movies/id_movie/hash">
+                <Image width={115} height={207} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
+              </Link>
+            </li>
+          </ul>
         </section>
     </>
   )
