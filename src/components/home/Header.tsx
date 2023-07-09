@@ -1,3 +1,5 @@
+'use client'
+import { useEffect } from 'react'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -5,6 +7,14 @@ import Link from 'next/link'
 import Shimmer from '../effects/Shimmer'
 
 export default function Header() {
+  const handlerClick = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+
   return (
     <header className="flex flex-col absolute z-10 top-0 left-0 right-0">
       <div className="flex gap-2 px-4 py-2">
@@ -14,7 +24,7 @@ export default function Header() {
             width={20}
             height={36}
             alt="Netflix Logo"
-            className="inline-block align-middle"
+            className="inline-block align-middle h-auto"
           />
         </div>
         <form className="flex-1 flex items-stretch h-9 bg-white/30 rounded-md">
@@ -60,8 +70,8 @@ export default function Header() {
         <Link className="text-sm" href="/">
           Movies
         </Link>
-        <Link href="/" className="text-sm">
-          <span className='mr-1'>Categories</span>
+        <div onClick={handlerClick} className="text-sm">
+          <span className='mr-1 select-none'>Categories</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -75,7 +85,7 @@ export default function Header() {
               fill="white"
             />
           </svg>
-        </Link>
+        </div>
       </div>
     </header>
   )
