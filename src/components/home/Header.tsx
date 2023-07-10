@@ -59,19 +59,19 @@ export default function Header() {
             width={48}
             height={48}
             alt="Netflix Logo"
-            className="inline-block w-auto h-auto align-middle"
+            className="inline-block w-auto align-middle"
           />
         </div>
       </div>
       <div className="flex justify-center items-center gap-x-8">
-        <Link className="text-sm" href="/">
+        <Link className="text-sm font-medium text-white/70" href="/">
           TV Show
         </Link>
-        <Link className="text-sm" href="/">
+        <Link className="text-sm font-medium text-white/70" href="/">
           Movies
         </Link>
-        <div onClick={handlerClick} className="text-sm">
-          <span className='mr-1 select-none'>Categories</span>
+        <div onClick={handlerClick} className="text-sm font-bold">
+          <span className='mr-1 font-medium text-white/70'>Categories</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -82,7 +82,7 @@ export default function Header() {
           >
             <path
               d="M6.37801 10.5228C6.42648 10.5734 6.49133 10.6148 6.56699 10.6434C6.64265 10.672 6.72684 10.6869 6.8123 10.6869C6.89777 10.6869 6.98196 10.672 7.05762 10.6434C7.13327 10.6148 7.19813 10.5734 7.2466 10.5228L12.0017 5.58497C12.0567 5.52802 12.089 5.46131 12.095 5.39209C12.101 5.32288 12.0805 5.2538 12.0357 5.19237C11.991 5.13094 11.9236 5.07951 11.8411 5.04366C11.7585 5.0078 11.6638 4.9889 11.5674 4.98901H2.05724C1.961 4.9893 1.86669 5.00844 1.78445 5.04438C1.70221 5.08032 1.63515 5.13169 1.59049 5.19298C1.54582 5.25427 1.52525 5.32315 1.53096 5.39222C1.53668 5.46129 1.56848 5.52793 1.62294 5.58497L6.37801 10.5228Z"
-              fill="white"
+              className='fill-white/70'
             />
           </svg>
         </div>

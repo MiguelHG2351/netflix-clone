@@ -38,7 +38,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex gap-x-8 self-stretch px-8 py-4 justify-center">
-              <button className="inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity">
+              <button className="inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -54,7 +54,7 @@ export default function Home() {
                 </svg>
                 My List
               </button>
-              <button className="bg-slate-100 flex items-center rounded-md text-black px-4 py-2 gap-x-2 hidden-tap active:opacity-20 transition-opacity">
+              <button className="bg-slate-100 flex items-center rounded-md text-black px-4 py-2 gap-x-2 hidden-tap active:opacity-20 transition-opacity text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="22"
@@ -69,7 +69,7 @@ export default function Home() {
                 </svg>
                 <span>Play</span>
               </button>
-              <button className="inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity">
+              <button className="inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
