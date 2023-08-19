@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {FC, ReactNode, useState, useEffect} from 'react'
 import {createPortal} from 'react-dom'
-import {WithChildren} from '../../../helpers'
 
 type WithChildren = {
   children?: ReactNode
