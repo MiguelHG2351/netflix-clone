@@ -16,7 +16,15 @@ export default function Home() {
             priority={true}
             width={375}
             height={541}
-            className="max-w-full w-full h-auto"
+            className="max-w-full w-full h-auto sm:hidden"
+            alt="Stranger Things Poster"
+          />
+          <Image
+            src="/images/poster/stranger-poster-sm.png"
+            priority={true}
+            width={375}
+            height={541}
+            className="hidden max-w-full w-full h-auto sm:block"
             alt="Stranger Things Poster"
           />
           <section className="absolute bottom-0 left-0 right-0 flex flex-col items-stretch bg-gradient-cover">

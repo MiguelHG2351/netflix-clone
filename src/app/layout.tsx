@@ -39,8 +39,10 @@ export default function RootLayout({
 }) {
   
   return (
-    <html lang="en">
-      <body className={netflixFont.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={netflixFont.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   )
 }
