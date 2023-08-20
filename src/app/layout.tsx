@@ -1,5 +1,6 @@
 import './globals.css'
 import localFont from 'next/font/local'
+import { ClerkProvider } from '@clerk/nextjs'
 
 const netflixFont = localFont({
   src: [
