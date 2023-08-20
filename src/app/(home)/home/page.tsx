@@ -161,7 +161,7 @@ export default function Home() {
                   />
                 </div>
                 <Link href="/movies/id_movie/hash">
-                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
+                  <Image className="h-[72px]" width={128} height={72} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
                 </Link>
               </li>
             </ul>

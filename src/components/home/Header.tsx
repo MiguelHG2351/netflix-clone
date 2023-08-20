@@ -64,13 +64,13 @@ export default function Header() {
         </div>
       </div>
       <div className="flex justify-center items-center gap-x-8">
-        <Link className="text-sm font-medium text-white/70" href="/">
+        <Link className="text-sm font-medium text-white/70 select-none" href="/">
           TV Show
         </Link>
-        <Link className="text-sm font-medium text-white/70" href="/">
+        <Link className="text-sm font-medium text-white/70 select-none" href="/">
           Movies
         </Link>
-        <div onClick={handlerClick} className="text-sm font-bold">
+        <div onClick={handlerClick} className="text-sm font-bold select-none cursor-pointer">
           <span className='mr-1 font-medium text-white/70'>Categories</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
