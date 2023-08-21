@@ -1,16 +1,21 @@
+'use client'
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { useUser } from '@clerk/nextjs'
+import { Item } from "@/components/Lolomo/Item"
 
 export const metadata: Metadata = {
   title: 'Home',
 }
 
 export default function Home() {
+  const user = useUser()
+  console.log(user.user)
   
   return (
     <>
-      <section className="relative">
+      <section className="relative max-h-[85vh] h-auto">
           <Image
             src="/images/logos/stranger-poster.png"
             priority={true}
@@ -20,19 +25,21 @@ export default function Home() {
             alt="Stranger Things Poster"
           />
           <Image
-            src="/images/poster/stranger-poster-sm.png"
+            src="/images/poster/poster-home.jpg"
+            unoptimized={true}
             priority={true}
             width={375}
             height={541}
             className="hidden max-w-full w-full h-auto sm:block"
             alt="Stranger Things Poster"
           />
-          <section className="absolute bottom-0 left-0 right-0 flex flex-col items-stretch bg-gradient-cover">
+          <div className="absolute right-[26%] left-0 top-0 bottom-0 hidden sm:block sm:bg-gradient-cover-right"></div>
+          <section className="absolute bottom-0 left-0 right-0 sm:right-[unset] flex flex-col items-stretch sm:top-0 sm:justify-center sm:w-1/2 bg-gradient-cover sm:bg-black/10 sm:bg-no-gradient">
             <div className="flex flex-col items-center gap-y-2">
-              <h2 className="text-4xl font-bold text-center w-min">
+              <h2 className="text-3xl sm:text-6xl font-bold text-center w-min">
                 Stranger Things 5
               </h2>
-              <ul className="flex gap-x-5">
+              <ul className="flex gap-x-5 sm:hidden">
                 <li className="text-xs">TV Show</li>
                 <li className="text-xs relative before:absolute before:rounded-full before:w-2 before:h-2 before:bg-red-500 before:top-[calc(50%_-_4px)] before:-left-[14px]">
                   Supernatural
@@ -46,7 +53,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex gap-x-8 self-stretch px-8 py-4 justify-center">
-              <button className="inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity text-xs">
+              <button className="sm:hidden inline-flex flex-col items-center hidden-tap active:opacity-20 transition-opacity text-xs">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -114,56 +121,11 @@ export default function Home() {
         </section>
         <section className="py-2 flex flex-col gap-y-4">
           <article className="px-2">
-            <h2 className="text-base font-medium mb-4">Continue Watching for Eron</h2>
+            <h2 className="text-base font-medium mb-4">Continue Watching for { user?.user?.username! }</h2>
             <ul className="hidden-scroll flex gap-x-3 items-center whitespace-nowrap overflow-x-auto">
-              <li className="flex-shrink-0 h-max relative">
-                <div className="absolute right-0 top-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width={25} height={32} viewBox="0 0 25 32" fill="none">
-                    <path d="M23.828 30.7233L1.1848 28.5011V0.880964H23.828V30.7233Z" fill="#EE1520" stroke="#EE1520" strokeWidth="0.905726" />
-                  </svg>
-                  <div className="info absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-start items-center">
-                    <span className="text-[10px] font-bold uppercase">Top</span>
-                    <span className="text-xs font-bold leading-[2px]">10</span>
-                  </div>
-                </div>
-                <div className="absolute left-2 top-2">
-                  <Image
-                    src="/images/logos/netflix.png" className="w-[20px] h-[36px]" width={20} height={36} alt="Netflix original"
-                  />
-                </div>
-                <Link href="/movies/id_movie/hash">
-                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/top-10-1.png" alt="The first movie on top 10" />
-                </Link>
-              </li>
-              <li className="relative flex-shrink-0 h-max">
-                <div className="absolute left-2 top-2">
-                  <Image
-                    src="/images/logos/netflix.png" className="w-[20px] h-[36px]" width={20} height={36} alt="Netflix original"
-                  />
-                </div>
-                <Link href="/movies/id_movie/hash">
-                  <Image className="h-[207px]" width={115} height={207} src="/images/top-list/other-serie.png" alt="Another serie in the top 10" />
-                </Link>
-              </li>
-              <li className="relative flex-shrink-0 h-max">
-                <div className="absolute right-0 top-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width={25} height={32} viewBox="0 0 25 32" fill="none">
-                    <path d="M23.828 30.7233L1.1848 28.5011V0.880964H23.828V30.7233Z" fill="#EE1520" stroke="#EE1520" strokeWidth="0.905726" />
-                  </svg>
-                  <div className="info absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-start items-center">
-                    <span className="text-[10px] font-bold uppercase">Top</span>
-                    <span className="text-xs font-bold leading-[2px]">10</span>
-                  </div>
-                </div>
-                <div className="absolute left-2 top-2">
-                  <Image
-                    src="/images/logos/netflix.png" className="w-[20px] h-[36px]" width={20} height={36} alt="Netflix original"
-                  />
-                </div>
-                <Link href="/movies/id_movie/hash">
-                  <Image className="h-[72px]" width={128} height={72} src="/images/top-list/top-10-2.png" alt="The third movie on top 10" />
-                </Link>
-              </li>
+              <Item id="1" isTop10={true} isNetflixOriginal={true} imageUrl="/images/top-list/top-10-1.png" imageAlt="The first movie on top 10" />
+              <Item id="2" isTop10={true} isNetflixOriginal={true} imageUrl="/images/top-list/other-serie.png" imageAlt="Another serie in the top 10" />
+              <Item id="3" isTop10={true} isNetflixOriginal={true} imageUrl="/images/top-list/top-10-2.png" imageAlt="The third movie on top 10" />
             </ul>
           </article>
           <article className="px-2">
