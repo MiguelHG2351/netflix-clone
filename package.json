@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@clerk/nextjs": "4.23.2",
-    "@prisma/client": "5.1.1",
+    "@t3-oss/env-nextjs": "^0.6.1",
     "@tanstack/react-query": "4.33.0",
     "@tanstack/react-query-devtools": "4.33.0",
     "autoprefixer": "10.4.15",
     "axios": "1.4.0",
+    "drizzle-orm": "^0.28.2",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
@@ -23,12 +24,15 @@
     "react-dom": "18.2.0",
     "superjson": "1.13.1",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@planetscale/database": "^1.10.0",
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "prisma": "5.1.1"
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.13"
   }
 }
