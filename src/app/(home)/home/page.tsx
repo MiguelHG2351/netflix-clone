@@ -1,8 +1,6 @@
-'use client'
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { useUser } from '@clerk/nextjs'
 import { Item } from "@/components/Lolomo/Item"
 
 export const metadata: Metadata = {
@@ -10,7 +8,6 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const user = useUser()
   
   return (
     <>
@@ -120,7 +117,7 @@ export default function Home() {
         </section>
         <section className="py-2 flex flex-col gap-y-4">
           <article className="px-2">
-            <h2 className="text-base font-medium mb-4">Continue Watching for { user?.user?.username! }</h2>
+            <h2 className="text-base font-medium mb-4">Continue Watching for</h2>
             <ul className="hidden-scroll flex gap-x-3 items-center whitespace-nowrap overflow-x-auto">
               <Item id="1" isTop10={true} isNetflixOriginal={true} imageUrl="/images/top-list/top-10-1.png" imageAlt="The first movie on top 10" />
               <Item id="2" isTop10={true} isNetflixOriginal={true} imageUrl="/images/top-list/other-serie.png" imageAlt="Another serie in the top 10" />
