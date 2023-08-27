@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-type Props = {
+export interface LolomoItemProps {
   imageUrl: string,
   imageAlt: string,
   isNetflixOriginal: boolean,
@@ -10,7 +10,9 @@ type Props = {
   id: string,
 }
 
-export const Item: FC<Props> = ({ isNetflixOriginal, isTop10, imageAlt, imageUrl }) => {
+export const Item: FC<LolomoItemProps> = ({ isNetflixOriginal, isTop10, imageAlt, imageUrl }) => {
+
+  
   return (
     <li className="flex-shrink-0 h-max relative">
       {
