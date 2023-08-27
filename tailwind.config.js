@@ -13,7 +13,6 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-cover': 'linear-gradient(0deg, rgba(0,0,0,.6) 70.15%, rgba(0, 0, 0, 0) 100%)',
         'gradient-cover-right': 'linear-gradient(77deg,rgba(0,0,0,.6),transparent 85%)',
-        'gradient-shop': ' linear-gradient(81.55deg, #99060D 3.18%, rgba(48, 1, 18, 0.483051) 28.35%, rgba(12, 0, 19, 0.305085) 44.45%, rgba(0, 0, 0, 0) 62.58%);',
         'no-gradient': 'none',
       },
     },

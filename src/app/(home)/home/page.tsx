@@ -152,37 +152,6 @@ export default function Home() {
               </li>
             </ul>
           </article>
-          <article className="bg-gradient-shop flex items-center pl-3">
-            <div className="flex-1 py-8 flex flex-col justify-center gap-y-2">
-              <div className="flex items-center">
-                <Image
-                  src="/images/logos/netflix.png"
-                  width={20}
-                  height={36}
-                  alt="Netflix original"
-                />
-                <h2 className="text-2xl">Shop</h2>
-              </div>
-              <p className="text-xs">Exclusive limited editions of carefully selected high-quality apparel and lifestyle products tied to our shows and brand on a regular basis</p>
-              <Link href="/" className="inline-block w-max p-2 px-4 bg-white text-xs text-black font-bold rounded-md">Go to shop</Link>
-            </div>
-            <ul className="flex-1 hidden-scroll h-max flex gap-x-2 whitespace-nowrap overflow-x-auto">
-              <Image
-                src="/images/shop/shop-1.png"
-                width={129}
-                height={195}
-                className="flex-shrink-0 w-auto h-[195px]"
-                alt="Ejemplo 1 de la tienda"
-              />
-              <Image
-                src="/images/shop/shop-2.png"
-                width={129}
-                height={195}
-                className="flex-shrink-0 w-auto h-[195px]"
-                alt="Ejemplo 1 de la tienda"
-              />
-            </ul>
-          </article>
           <article className="px-2">
             <h2 className="text-base font-medium mb-4">Gems for you</h2>
             <ul className="hidden-scroll flex gap-x-3 items-center whitespace-nowrap overflow-x-auto">
